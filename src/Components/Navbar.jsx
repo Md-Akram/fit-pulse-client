@@ -1,7 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
+    const active = 'inline-block rounded border-teal-600 bg-teal-600 px-4 py-2 text-sm font-medium text-white'
+    const inActive = 'inline-block rounded px-4 py-2 text-sm font-medium text-teal'
+
     return (
         <header className="bg-gray-100">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -22,57 +26,39 @@ const Navbar = () => {
                         <nav aria-label="Global">
                             <ul className="flex items-center gap-6 text-sm">
                                 <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        About
-                                    </a>
+                                    <NavLink to='/' className={({ isActive }) => isActive ? active : inActive}>
+                                        Home
+                                    </NavLink>
                                 </li>
 
                                 <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        Careers
-                                    </a>
+                                    <NavLink to='gallery' className={({ isActive }) => isActive ? active : inActive}>
+                                        Gallery
+                                    </NavLink>
                                 </li>
 
                                 <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        History
-                                    </a>
+                                    <NavLink to='trainer' className={({ isActive }) => isActive ? active : inActive}>
+                                        Trainer
+                                    </NavLink>
                                 </li>
 
                                 <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        Services
-                                    </a>
+                                    <NavLink to='classes' className={({ isActive }) => isActive ? active : inActive}>
+                                        Classes
+                                    </NavLink>
                                 </li>
 
                                 <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        Projects
-                                    </a>
+                                    <NavLink to='dashboard' className={({ isActive }) => isActive ? active : inActive}>
+                                        Dashboard
+                                    </NavLink>
                                 </li>
 
                                 <li>
-                                    <a
-                                        className="text-gray-500 transition hover:text-gray-500/75"
-                                        href="/"
-                                    >
-                                        Blog
-                                    </a>
+                                    <NavLink to='community' className={({ isActive }) => isActive ? active : inActive}>
+                                        Community
+                                    </NavLink>
                                 </li>
                             </ul>
                         </nav>
@@ -117,6 +103,15 @@ const Navbar = () => {
                                 </svg>
                             </button>
                         </div>
+                    </div>
+
+                    <div className="flex flex-row gap-2 items-center text-teal-600">
+                        <img
+                            alt="Man"
+                            src="https://images.pexels.com/photos/39308/runners-silhouettes-athletes-fitness-39308.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            className="h-14 w-14 rounded-full object-cover"
+                        />
+                        <p className='text-sm' >Fit user</p>
                     </div>
                 </div>
             </div>
