@@ -5,6 +5,7 @@ import About from '../Components/About'
 import FeaturedClasses from '../Components/FeaturedClasses'
 import Testimonials from '../Components/Testimonials'
 import LatestArticles from '../Components/LatestArticles'
+import NewsLetter from '../Components/NewsLetter'
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <FeaturedClasses />
             <Testimonials />
             <LatestArticles />
+            <NewsLetter />
         </>
     )
 }

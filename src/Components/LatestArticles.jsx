@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BlogCard from './BlogCard'
+import { Link } from 'react-router-dom'
 
 const LatestArticles = () => {
 
@@ -28,6 +29,14 @@ const LatestArticles = () => {
                     {articles.map(article => <BlogCard key={article.id} article={article} />)}
 
 
+                </div>
+                <div className="mt-8 flex items-center justify-center gap-4 text-center">
+                    <Link
+                        to="community"
+                        className="block w-full rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto"
+                    >
+                        Explore blogs
+                    </Link>
                 </div>
             </div>
         </section>
