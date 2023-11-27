@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "className": "Running Class",
+        "instructor": "John Smith",
+        "duration": "60 minutes",
+        "intensity": "Intermediate",
+        "schedule": "Mondays and Wednesdays at 7:00 AM",
+        "description": "Join our running class for a dynamic cardio workout that improves endurance and boosts overall fitness."
+    },
+    {
+        "id": 2,
+        "className": "Classic Yoga",
+        "instructor": "Emily Davis",
+        "duration": "75 minutes",
+        "intensity": "Beginner",
+        "schedule": "Tuesdays and Thursdays at 6:30 PM",
+        "description": "Experience the tranquility of classic yoga, focusing on mindful movements, breath control, and relaxation."
+    },
+    {
+        "id": 3,
+        "className": "Bodybuilding Class",
+        "instructor": "Alex Rodriguez",
+        "duration": "90 minutes",
+        "intensity": "Advanced",
+        "schedule": "Fridays at 5:00 PM",
+        "description": "Our bodybuilding class is designed for those seeking strength and muscle development through targeted resistance training."
+    },
+    {
+        "id": 4,
+        "className": "HIIT Session",
+        "instructor": "Michelle Turner",
+        "duration": "45 minutes",
+        "intensity": "High",
+        "schedule": "Saturdays at 9:00 AM",
+        "description": "Join our high-intensity interval training for a powerful, efficient workout combining bursts of intense activity with short rest periods."
+    },
+    {
+        "id": 5,
+        "className": "Weight Lifting",
+        "instructor": "Ryan Harris",
+        "duration": "60 minutes",
+        "intensity": "Intermediate",
+        "schedule": "Wednesdays and Fridays at 4:30 PM",
+        "description": "Discover the art of weight lifting, focusing on proper form, technique, and strength development for a sculpted physique."
+    },
+    {
+        "id": 6,
+        "className": "Mindful Meditation",
+        "instructor": "Sophia Lee",
+        "duration": "30 minutes",
+        "intensity": "All Levels",
+        "schedule": "Sundays at 10:00 AM",
+        "description": "Unwind and center yourself with our mindful meditation class, designed to reduce stress, enhance focus, and promote overall well-being."
+    }
+]
