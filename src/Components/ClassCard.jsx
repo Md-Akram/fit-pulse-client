@@ -19,7 +19,7 @@ const ClassCard = ({ singleClass }) => {
                         {className}
                     </h3>
 
-                    <p className="mt-1 text-xs font-medium text-white">Trainer:{instructor}</p>
+                    <p className="mt-1 text-xs font-medium text-white">Trainer : {instructor}</p>
                 </div>
             </div>
 
