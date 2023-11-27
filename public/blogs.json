@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Unlocking the Power of High-Intensity Interval Training (HIIT)",
+        "author": "John Smith",
+        "date": "November 15, 2023",
+        "image": "https://example.com/post1.jpg",
+        "summary": "Discover the benefits of HIIT workouts and how incorporating them into your fitness routine can lead to remarkable results."
+    },
+    {
+        "id": 2,
+        "title": "The Art of Mindful Meditation: A Guide to Inner Peace",
+        "author": "Emma Johnson",
+        "date": "November 20, 2023",
+        "image": "https://example.com/post2.jpg",
+        "summary": "Explore the transformative effects of mindfulness and learn practical techniques to integrate meditation into your daily life."
+    },
+    {
+        "id": 3,
+        "title": "Building Strong Foundations: A Beginner's Guide to Weight Lifting",
+        "author": "Alex Martinez",
+        "date": "November 25, 2023",
+        "image": "https://example.com/post3.jpg",
+        "summary": "Embark on your weight lifting journey with expert tips and a comprehensive guide for beginners to achieve strength and muscle development."
+    },
+    {
+        "id": 4,
+        "title": "Finding Balance: The Importance of Yoga in a Fast-Paced World",
+        "author": "Sophie Lee",
+        "date": "December 1, 2023",
+        "image": "https://example.com/post4.jpg",
+        "summary": "Explore the profound benefits of yoga, both physically and mentally, and how it can bring balance and serenity to your busy life."
+    },
+    {
+        "id": 5,
+        "title": "Nutrition Essentials: Fueling Your Body for Peak Performance",
+        "author": "Daniel Walker",
+        "date": "December 5, 2023",
+        "image": "https://example.com/post5.jpg",
+        "summary": "Learn about the importance of nutrition in achieving your fitness goals and discover key principles for optimal performance."
+    },
+    {
+        "id": 6,
+        "title": "Mastering the Mind-Muscle Connection in Bodybuilding",
+        "author": "Sophia Rodriguez",
+        "date": "December 10, 2023",
+        "image": "https://example.com/post6.jpg",
+        "summary": "Dive into the world of bodybuilding and understand how establishing a strong mind-muscle connection can enhance your training results."
+    }
+]
