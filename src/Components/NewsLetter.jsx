@@ -1,6 +1,49 @@
 import React from 'react'
+import Swal from 'sweetalert2'
 
 const NewsLetter = () => {
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        const form = e.target
+        const name = form.name.value
+        const email = form.email.value
+
+        const data = {
+            name,
+            email
+        }
+
+        fetch('http://localhost:5000/subscribers', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json()
+            })
+            .then(responseData => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "You have subscribed to the newsletter",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                form.reset()
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+    }
+
     return (
 
         < section className="bg-gray-50" >
@@ -16,12 +59,13 @@ const NewsLetter = () => {
                 </div>
 
                 <div className="mx-auto mt-8 max-w-xl">
-                    <form action="#" className="sm:flex sm:gap-4">
+                    <form onSubmit={handleSubmit} className="sm:flex sm:gap-4">
                         <div className="sm:flex-1">
                             <label htmlFor="name" className="sr-only">Name</label>
 
                             <input
                                 type="text"
+                                name='name'
                                 placeholder="Name"
                                 className="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
                             />
@@ -32,6 +76,7 @@ const NewsLetter = () => {
 
                             <input
                                 type="email"
+                                name='email'
                                 placeholder="Email address"
                                 className="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
                             />
