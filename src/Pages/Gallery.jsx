@@ -3,6 +3,10 @@ import Loading from '../Components/Loading';
 
 const Gallery = () => {
 
+    useEffect(() => {
+        document.title = 'Fit Pulse | Gallery'
+    }, [])
+
     // const applicationId = 533884
     // const accessKey = 5SjI5v6BSxjYVaXqHun2fn5R7mO_UNCCj8hjA7WO7lg
     // const secretKey = 30H3hB2h8krjkDehb1Q_N43tngBgnwcT76HKelmz5HU

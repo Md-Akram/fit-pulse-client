@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Banner from '../Components/Banner'
 import Featured from '../Components/Featured'
 import About from '../Components/About'
@@ -9,6 +9,11 @@ import NewsLetter from '../Components/NewsLetter'
 import Teams from '../Components/Teams'
 
 const Home = () => {
+
+    useEffect(() => {
+        document.title = "Fit Pluse | Home";
+    }, [])
+
     return (
         <>
             <Banner />

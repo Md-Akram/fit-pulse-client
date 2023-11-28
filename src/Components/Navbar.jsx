@@ -38,8 +38,8 @@ const Navbar = () => {
                                 </li>
 
                                 <li>
-                                    <NavLink to='trainer' className={({ isActive }) => isActive ? active : inActive}>
-                                        Trainer
+                                    <NavLink to='trainers' className={({ isActive }) => isActive ? active : inActive}>
+                                        Trainers
                                     </NavLink>
                                 </li>
 
