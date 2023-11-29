@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Swal from 'sweetalert2';
 
 const skillsList = [
     'Cardio',
@@ -36,7 +37,33 @@ const BeATrainer = () => {
         const data = {
             name, email, age, imageUrl, weeklySlots, dailySlots, selectedSkills
         }
-        console.log(data);
+
+        fetch('http://localhost:5000/apply', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json()
+        })
+            .then(responseData => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "You have subscribed to the newsletter",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                form.reset()
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
 
     }
 
