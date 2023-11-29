@@ -7,7 +7,7 @@ const Trainers = () => {
 
     useEffect(() => {
         document.title = "Fit Pluse | Trainers";
-        fetch('./trainers.json')
+        fetch('http://localhost:5000/trainers')
             .then(res => res.json())
             .then(data => setTrainers(data))
     }, [])
@@ -121,7 +121,7 @@ const Trainers = () => {
                             <div className='mt-4'>
                                 <Link
                                     className="inline-block rounded border border-teal-600 px-4 py-2 text-sm font-medium text-teal-600 hover:bg-teal-600 hover:text-white focus:outline-none focus:ring active:bg-teal-500"
-                                    to="/trainerDetails"
+                                    to={`/trainerDetails/${trainer._id}`}
                                 >
                                     Know more
                                 </Link>
@@ -129,7 +129,14 @@ const Trainers = () => {
                         </blockquote>)
                     }
                 </ul>
+                <Link
+                    className="inline-block rounded border border-teal-600 bg-teal-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-teal-600 focus:outline-none focus:ring active:text-teal-500 mt-4"
+                    to='/beATrainer'
+                >
+                    Become a Trainer
+                </Link>
             </div>
+
         </section>
     )
 }

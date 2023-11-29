@@ -13,6 +13,7 @@ import Login from './Pages/Login.jsx'
 import Register from './Pages/Register.jsx'
 import Trainers from './Pages/Trainer.jsx'
 import TrainerDetails from './Pages/TrainerDetails.jsx'
+import BeATrainer from './Pages/BeATrainer.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,12 +22,14 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path='gallery' element={<Gallery />} />
         <Route path='trainers' element={<Trainers />} />
+        <Route path='beATrainer' element={<BeATrainer />} />
+        <Route path='trainerDetails/:id' element={<TrainerDetails />} />
         <Route path='classes' element={<Classes />} />
         <Route path='dashboard' element={<Dashboard />} />
         <Route path='community' element={<Community />} />
         <Route path='login' element={<Login />} />
         <Route path='register' element={<Register />} />
-        <Route path='trainerDetails' element={<TrainerDetails />} />
+
       </Route>
 
       <Route path='*' element={<NotFound />}></Route>
