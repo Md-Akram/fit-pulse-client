@@ -14,6 +14,7 @@ import Register from './Pages/Register.jsx'
 import Trainers from './Pages/Trainer.jsx'
 import TrainerDetails from './Pages/TrainerDetails.jsx'
 import BeATrainer from './Pages/BeATrainer.jsx'
+import AuthProvider from './hooks/AuthProvider.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,6 +40,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
