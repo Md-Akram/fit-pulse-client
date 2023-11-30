@@ -30,17 +30,6 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setCurrentUser(user)
             setLoading(false)
-            // if (user.email) {
-            //     const email = user.email
-            //     fetch("https://hyper-market-server.vercel.app/jwt", {
-            //         method: "POST",
-            //         credentials: 'include',
-            //         headers: {
-            //             'content-type': 'application/json'
-            //         },
-            //         body: JSON.stringify({ email })
-            //     }).then(res => res.json()).then(data => { })
-            // }
 
         });
         return () => unsubscribe();
@@ -65,7 +54,37 @@ const AuthProvider = ({ children }) => {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
+                const data = {
+                    name: user.displayName,
+                    email: user.email,
+                    url: user.photoURL,
+                    role: 'member'
+                }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                }).then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json()
+                })
+                    .then(responseData => {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "You have signed up successfully",
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
 
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
                 setCurrentUser(user)
                 setLoading(false)
 
