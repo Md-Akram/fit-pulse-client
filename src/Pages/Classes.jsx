@@ -34,6 +34,10 @@ const exerciseData = {
 
 const Classes = () => {
 
+    useEffect(() => {
+        document.title = 'Fit Pulse | Classes'
+    }, [])
+
     const [exerciseInfo, setExerciseInfo] = useState([])
     const [allClasses, setAllClasses] = useState([])
     useEffect(() => {

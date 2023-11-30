@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 const ClassesDetails = () => {
+
+    useEffect(() => {
+        document.title = 'Fit Pulse | Class Details'
+    }, [])
+
     const { id, exerciseName } = useParams()
     const [data, setData] = useState()
     useEffect(() => {
@@ -9,6 +14,8 @@ const ClassesDetails = () => {
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
+
+
 
     let requiredObj
 

@@ -13,6 +13,10 @@ const skillsList = [
 
 const BeATrainer = () => {
 
+    useEffect(() => {
+        document.title = 'Fit Pulse | Be a trainer'
+    }, [])
+
     const [selectedSkills, setSelectedSkills] = useState([]);
 
     const { currentUser } = useContext(AuthContext)

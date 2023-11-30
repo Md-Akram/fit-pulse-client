@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Trainers = () => {
 
+    useEffect(() => {
+        document.title = 'Fit Pulse | Trainers'
+    }, [])
+
     const [trainers, setTrainers] = useState([])
 
     useEffect(() => {

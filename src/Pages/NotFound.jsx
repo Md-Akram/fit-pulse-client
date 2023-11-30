@@ -2,6 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const NotFound = () => {
+
+    useEffect(() => {
+        document.title = 'Fit Pulse | Not Found'
+    }, [])
+
     return (
         <div className="grid h-screen px-4 bg-white place-content-center">
             <div className="text-center">

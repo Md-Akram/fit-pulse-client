@@ -3,6 +3,10 @@ import { Link, useParams } from 'react-router-dom'
 
 const TrainerDetails = () => {
 
+    useEffect(() => {
+        document.title = 'Fit Pulse | Trainers Details'
+    }, [])
+
     const { id } = useParams()
     const [data, setData] = useState()
 

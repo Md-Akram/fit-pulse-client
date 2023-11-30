@@ -1,0 +1,58 @@
+[
+    {
+        "img": "https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "date": "2023-12-01",
+        "title": "Exploring the Benefits of Morning Workouts",
+        "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "like": 120,
+        "dislike": 5
+    },
+    {
+        "img": "https://images.pexels.com/photos/221210/pexels-photo-221210.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "date": "2023-11-25",
+        "title": "Healthy Eating Habits for a Better Lifestyle",
+        "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "like": 85,
+        "dislike": 3
+    },
+    {
+        "img": "https://images.pexels.com/photos/235922/pexels-photo-235922.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "date": "2023-11-18",
+        "title": "Mindfulness Meditation: A Beginner's Guide",
+        "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "like": 150,
+        "dislike": 8
+    },
+    {
+        "img": "https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "date": "2023-11-12",
+        "title": "Benefits of Outdoor Activities for Mental Health",
+        "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "like": 110,
+        "dislike": 4
+    },
+    {
+        "img": "https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "date": "2023-11-05",
+        "title": "Tips for a Productive Home Workout Routine",
+        "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "like": 95,
+        "dislike": 6
+    },
+    {
+        "img": "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "date": "2023-10-29",
+        "title": "Understanding the Basics of Strength Training",
+        "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "like": 130,
+        "dislike": 7
+    },
+    {
+        "img": "https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "date": "2023-10-22",
+        "title": "Importance of Hydration During Workouts",
+        "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "like": 105,
+        "dislike": 2
+    }
+]

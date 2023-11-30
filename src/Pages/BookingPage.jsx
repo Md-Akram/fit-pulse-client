@@ -16,6 +16,10 @@ const BookingPage = () => {
             .then(data => setData(data))
     }, [])
 
+    useEffect(() => {
+        document.title = 'Fit Pulse | Booking'
+    }, [])
+
     const handleJoin = (plan, price) => {
         const info = {
             trainerName: data.trainerName,
