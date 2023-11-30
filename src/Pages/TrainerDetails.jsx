@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const TrainerDetails = () => {
 
@@ -31,17 +31,21 @@ const TrainerDetails = () => {
                     </div>
 
                     <ul className="mt-4 space-y-2">
-                        {data.availableTimeSlots.map((slot, index) => <li>
-                            <div
-                                key={index}
+                        {data.availableTimeSlots.map((slot, index) => <li key={index}>
+                            <Link
+                                to={`bookingPage/${slot.time}`}
+
                                 className="block h-full rounded-lg border border-gray-700 p-4 hover:border-teal-600"
                             >
                                 <strong className="font-medium text-black">Slot : {index + 1}</strong>
+                                <p className="mt-1 text-xs font-medium text-black-300">
+                                    Exercise : {slot.exerciseName}
+                                </p>
 
                                 <p className="mt-1 text-xs font-medium text-black-300">
-                                    Time : {slot}
+                                    Time : {slot.time}
                                 </p>
-                            </div>
+                            </Link>
                         </li>)}
                     </ul>
                 </article>
