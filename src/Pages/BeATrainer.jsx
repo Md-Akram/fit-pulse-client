@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Swal from 'sweetalert2';
+import { AuthContext } from '../hooks/AuthProvider';
 
 const skillsList = [
     'Cardio',
@@ -13,6 +14,8 @@ const skillsList = [
 const BeATrainer = () => {
 
     const [selectedSkills, setSelectedSkills] = useState([]);
+
+    const { currentUser } = useContext(AuthContext)
 
     const handleSkillChange = (skill) => {
         if (selectedSkills.includes(skill)) {
@@ -28,7 +31,7 @@ const BeATrainer = () => {
         e.preventDefault()
         const form = e.target
         const name = form.name.value
-        const email = form.email.value
+        const email = currentUser.email
         const age = form.age.value
         const imageUrl = form.imgUrl.value
         const weeklySlots = form.weeklySlots.value
@@ -108,7 +111,8 @@ const BeATrainer = () => {
                         <input
                             type="email"
                             name='email'
-                            required
+                            value={currentUser.email}
+                            readOnly
                             className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                             placeholder="Enter email"
                         />

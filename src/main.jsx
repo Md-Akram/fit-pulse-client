@@ -15,6 +15,7 @@ import Trainers from './Pages/Trainer.jsx'
 import TrainerDetails from './Pages/TrainerDetails.jsx'
 import BeATrainer from './Pages/BeATrainer.jsx'
 import AuthProvider from './hooks/AuthProvider.jsx'
+import PrivateRoute from './hooks/PrivateRoute.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +24,7 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path='gallery' element={<Gallery />} />
         <Route path='trainers' element={<Trainers />} />
-        <Route path='beATrainer' element={<BeATrainer />} />
+        <Route path='beATrainer' element={<PrivateRoute><BeATrainer /></PrivateRoute>} />
         <Route path='trainerDetails/:id' element={<TrainerDetails />} />
         <Route path='classes' element={<Classes />} />
         <Route path='dashboard' element={<Dashboard />} />
